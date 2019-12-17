@@ -1,0 +1,93 @@
+{
+  "Records": [
+    {
+      "eventID": "fe98111ed30435a4e546c0ecdc2f68f7",
+      "eventName": "MODIFY",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "us-east-1",
+      "dynamodb": {
+          "ApproximateCreationDateTime": 1576516897,
+          "Keys": {
+              "sk": {
+                  "S": "sortKey"
+              },
+              "pk": {
+                  "S": "partitionKey"
+              }
+          },
+          "NewImage": {
+            "sk": {
+              "S": "sortKey"
+            },
+            "pk": {
+              "S": "partitionKey"
+            },
+            "Binary": {
+              "B": "AAEqQQ=="
+            },
+            "Boolean": {
+              "BOOL": false
+            },
+            "BinarySet": {
+              "BS": [
+                "AAEqQQ==",
+                "AAEqQQ=="
+              ]
+            },
+            "List": {
+              "L": [
+                {
+                  "S": "Cats"
+                },
+                {
+                  "S": "Fish"
+                },
+                {
+                  "N": "3.14159"
+                }
+              ]
+            },
+            "Map": {
+              "M": {
+                "Name": {
+                  "S": "Jane"
+                },
+                "Age": {
+                  "N": "36"
+                }
+              }
+            },
+            "FloatNumber": {
+              "N": "123.45"
+            },
+            "IntegerNumber": {
+              "N": "123"
+            },
+            "NumberSet": {
+              "NS": [
+                "123",
+                "456"
+              ]
+            },
+            "Null": {
+              "NULL": true
+            },
+            "String": {
+              "S": "String Test"
+            },
+            "StringSet": {
+              "SS": [
+                "Test1",
+                "Test2"
+              ]
+            }
+          },
+          "SequenceNumber": "125319600000000012510796858",
+          "SizeBytes": 884,
+          "StreamViewType": "NEW_IMAGE"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:us-east-1:1234567890:table/my-table/stream/2019-12-16T00:00:00.000"
+    }
+  ]
+}
