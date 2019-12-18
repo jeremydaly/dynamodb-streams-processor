@@ -9,7 +9,7 @@ The **DynamoDB Streams Processor** is a simple tool that makes working with [Dyn
 [DynamoDB Converter](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/Converter.html) utility to unmarshall the items, plus does some other cool magic (like unwrapping `Set`s and performing diffs) so you don't need to.
 
 ## It's not really magic... 🧙
-Take a look at the code (index.js) and you'll see that it's not a overly complex script. However, I found myself writing the same thing over and over again for different projects, so I decided to create something that made my life easier. If you find it useful for your projects, that's cool too.
+Take a look at the code (index.js) and you'll see that it's not an overly complex script. However, I found myself writing the same thing over and over again for different projects, so I decided to create something that made my life easier. If you find it useful for your projects, that's cool too.
 
 ## Installation
 Via npm or yarn:
@@ -192,9 +192,9 @@ Example truncated for clarity:
 ```
 
 ### Passing additional options
-The [DynamoDB Converter](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/Converter.html) supports additional options when unmarshalling data. The only one that likely makes sense to maybe use, is the boolean `wrapNumbers` option. This will return numbers as a NumberValue object instead of converting them to native JavaScript numbers. This allows for the safe round-trip transport of numbers of arbitrary size.
+The [DynamoDB Converter](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/Converter.html) supports additional options when unmarshalling data. The only one that might makes sense to use, is the boolean `wrapNumbers` option. This will return numbers as a NumberValue object instead of converting them to native JavaScript numbers. This allows for the safe round-trip transport of numbers of arbitrary size.
 
-To pass this option, send it in an object as the third parameter:
+To pass this option, send it an object as the third parameter:
 
 ```javascript
 exports.handler = async event => {
@@ -203,7 +203,7 @@ exports.handler = async event => {
 }
 ```
 
-This library automatically unwraps `Set`s (which the unmarshaller does not do). If you would like to return wrapped `Set`s, pass `wrapSets` in the options parameter.
+This library automatically unwraps `Set`s (which the unmarshaller does not do). If you would like to return wrapped `Set`s, pass `{ wrapSets: true }` as the third parameter.
 
 ## Contributions and Feedback
 Contributions, ideas and bug reports are welcome and greatly appreciated. Please add [issues](https://github.com/jeremydaly/dynamodb-streams-processor/issues) for suggestions and bug reports or create a pull request. You can also contact me on Twitter: [@jeremy_daly](https://twitter.com/jeremy_daly).
